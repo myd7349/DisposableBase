@@ -1,6 +1,6 @@
 ﻿namespace System
 {
-    public class DisposableBase : IDisposable
+    public abstract class DisposableBase : IDisposable
     {
         // Use C# finalizer syntax for finalization code.
         // This finalizer will run only if the Dispose method
