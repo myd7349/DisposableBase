@@ -68,13 +68,10 @@
         {
         }
 
-        // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Net.Sockets/src/System/Net/Sockets/NetworkStream.cs
-        // > ThrowIfDisposed();
-        protected void CheckIsDisposed()
+        protected void ThrowIfDisposed()
         {
             if (disposed_)
-                throw new ObjectDisposedException(
-                    string.Format("{0} object is disposed.", GetType().Name));
+                throw new ObjectDisposedException(string.Format("{0} object is disposed.", GetType().Name));
         }
 
         protected bool disposed_ = false;
