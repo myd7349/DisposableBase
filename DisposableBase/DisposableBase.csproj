@@ -6,13 +6,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     -->
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>DisposableBase</PackageId>
-    <Version>1.0.1</Version>
+    <Description>A simple base class for disposable objects.</Description>
+    <PackageTags>IDisposable;DisposableBase;Disposable Pattern</PackageTags>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <Authors>myd7349</Authors>
+    <PackageProjectUrl>https://github.com/myd7349/DisposableBase</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/myd7349/DisposableBase.git</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
@@ -27,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="../README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
 
@@ -35,4 +42,5 @@
 [Create a NuGet package using MSBuild](https://learn.microsoft.com/en-us/nuget/create-packages/creating-a-package-msbuild)
 [Project SDK (.Net Standard): Official way to create a nuget package that includes msbuild targets](https://stackoverflow.com/questions/56839480/project-sdk-net-standard-official-way-to-create-a-nuget-package-that-include)
 https://devblogs.microsoft.com/nuget/add-a-readme-to-your-nuget-package/#add-a-readme-to-your-package
+https://github.com/Open-NET-Libraries/Open.Disposable/blob/master/Source/Open.Disposable.csproj
 -->
