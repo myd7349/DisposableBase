@@ -1,9 +1,38 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net35;net6.0</TargetFrameworks>
+    <!--
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>DisposableBase</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>myd7349</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/myd7349/DisposableBase.git</RepositoryUrl>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
+    <Title>DisposableBase for .NET Framework 4.0</Title>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <DebugType Condition=" '$(Configuration)' == 'Debug' ">Full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
+
+<!--
+[Create a NuGet package using MSBuild](https://learn.microsoft.com/en-us/nuget/create-packages/creating-a-package-msbuild)
+[Project SDK (.Net Standard): Official way to create a nuget package that includes msbuild targets](https://stackoverflow.com/questions/56839480/project-sdk-net-standard-official-way-to-create-a-nuget-package-that-include)
+https://devblogs.microsoft.com/nuget/add-a-readme-to-your-nuget-package/#add-a-readme-to-your-package
+-->
