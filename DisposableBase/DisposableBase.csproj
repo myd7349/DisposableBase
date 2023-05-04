@@ -9,7 +9,7 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>DisposableBase</PackageId>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <Authors>myd7349</Authors>
     <Description>A simple base class for disposable objects.</Description>
     <Copyright>© myd7349. All rights reserved.</Copyright>
