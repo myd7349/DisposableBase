@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net35;net6.0</TargetFrameworks>
+    <TargetFrameworks>net35;netcoreapp3.1;net6.0</TargetFrameworks>
     <!--
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -9,21 +9,22 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>DisposableBase</PackageId>
-    <Description>A simple base class for disposable objects.</Description>
-    <PackageTags>IDisposable;DisposableBase;Disposable Pattern</PackageTags>
-    <Version>1.0.2</Version>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>myd7349</Authors>
+    <Description>A simple base class for disposable objects.</Description>
+    <Copyright>© myd7349. All rights reserved.</Copyright>
     <PackageProjectUrl>https://github.com/myd7349/DisposableBase</PackageProjectUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/myd7349/DisposableBase.git</RepositoryUrl>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/myd7349/DisposableBase.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>IDisposable;DisposableBase;Disposable</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
-    <Title>DisposableBase for .NET Framework 4.0</Title>
+    <Title>DisposableBase for .NET Framework 3.5</Title>
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <DebugType Condition=" '$(Configuration)' == 'Debug' ">Full</DebugType>
   </PropertyGroup>
@@ -39,8 +40,13 @@
 </Project>
 
 <!--
+[Package authoring best practices](https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices)
 [Create a NuGet package using MSBuild](https://learn.microsoft.com/en-us/nuget/create-packages/creating-a-package-msbuild)
 [Project SDK (.Net Standard): Official way to create a nuget package that includes msbuild targets](https://stackoverflow.com/questions/56839480/project-sdk-net-standard-official-way-to-create-a-nuget-package-that-include)
 https://devblogs.microsoft.com/nuget/add-a-readme-to-your-nuget-package/#add-a-readme-to-your-package
 https://github.com/Open-NET-Libraries/Open.Disposable/blob/master/Source/Open.Disposable.csproj
+[MSBuild reference](https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-reference?view=vs-2022)
+[Walkthrough: Use MSBuild](https://learn.microsoft.com/en-us/visualstudio/msbuild/walkthrough-using-msbuild?view=vs-2022)
+[Walkthrough: Create an MSBuild project file from scratch](https://learn.microsoft.com/en-us/visualstudio/msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch?view=vs-2022)
+[MSBuild reference for .NET SDK projects](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props)
 -->
