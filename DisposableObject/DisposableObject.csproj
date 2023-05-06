@@ -8,7 +8,7 @@
     -->
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>DisposableBase</PackageId>
+    <PackageId>DisposableObject</PackageId>
     <PackageVersion>1.0.3</PackageVersion>
     <Authors>myd7349</Authors>
     <Description>A simple base class for disposable objects.</Description>
@@ -17,14 +17,14 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/myd7349/DisposableBase.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>IDisposable;DisposableBase;Disposable</PackageTags>
+    <PackageTags>IDisposable;Disposable;DisposableBase;DisposableObject</PackageTags>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
-    <Title>DisposableBase for .NET Framework 3.5</Title>
+    <Title>DisposableObject for .NET Framework 3.5</Title>
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <DebugType Condition=" '$(Configuration)' == 'Debug' ">Full</DebugType>
   </PropertyGroup>

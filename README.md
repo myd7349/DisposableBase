@@ -1,17 +1,17 @@
-# [DisposableBase](https://github.com/myd7349/DisposableBase) [![NuGet](https://img.shields.io/nuget/v/DisposableBase.svg)](https://www.nuget.org/packages/DisposableBase/)
+# [DisposableObject](https://github.com/myd7349/DisposableObject) [![NuGet](https://img.shields.io/nuget/v/DisposableObject.svg)](https://www.nuget.org/packages/DisposableObject/)
 
 A simple base class for disposable objects.
 
 # Usage
 
-This library provides a base class `DisposableBase` for classes that need to implement the [IDisposable Interface](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable?view=net-6.0).
+This library provides a base class `DisposableObject` for classes that need to implement the [IDisposable Interface](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable?view=net-6.0).
 
 ```csharp
 namespace System
 {
-    public abstract class DisposableBase : IDisposable
+    public abstract class DisposableObject : IDisposable
     {
-        ~DisposableBase()
+        ~DisposableObject()
         {
             Dispose(false);
         }
@@ -56,13 +56,13 @@ namespace System
 }
 ```
 
-As shown above, `DisposableBase` provides two virtual methods, `DisposeManaged` and  `DisposeUnmanaged`, to clean up managed and unmanaged resources  respectively. You can override one or both of these methods as needed. 
+As shown above, `DisposableObject` provides two virtual methods, `DisposeManaged` and  `DisposeUnmanaged`, to clean up managed and unmanaged resources  respectively. You can override one or both of these methods as needed. 
 
 The `ThrowIfDisposed` method checks whether the current object has been disposed, and if so, throws an exception.
 
 # Known Issues
 
-1. Given that C# does not support multiple inheritance of classes, if your class already includes a base class, it may not be  possible to inherit from `DisposableBase`. In such a case, you can use `DisposableBase` as a reference to implement the [IDisposable Interface](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable?view=net-6.0) on your own.
+1. Given that C# does not support multiple inheritance of classes, if your class already includes a base class, it may not be  possible to inherit from `DisposableObject`. In such a case, you can use `DisposableObject` as a reference to implement the [IDisposable Interface](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable?view=net-6.0) on your own.
 2. (Feedback is welcome.)
 
 # Related Projects

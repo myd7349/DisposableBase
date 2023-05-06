@@ -1,13 +1,13 @@
 ﻿namespace System
 {
-    public abstract class DisposableBase : IDisposable
+    public abstract class DisposableObject : IDisposable
     {
         // Use C# finalizer syntax for finalization code.
         // This finalizer will run only if the Dispose method
         // does not get called.
         // It gives your base class the opportunity to finalize.
         // Do not provide finalizer in types derived from this class.
-        ~DisposableBase()
+        ~DisposableObject()
         {
             // Do not re-create Dispose clean-up code here.
             // Calling Dispose(disposing: false) is optimal in terms of
