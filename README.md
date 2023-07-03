@@ -71,6 +71,7 @@ The `ThrowIfDisposed` method checks whether the current object has been disposed
 - [Dispose.Scope](https://github.com/InCerryGit/Dispose.Scope)
 - [IDisposableAnalyzers](https://github.com/DotNetAnalyzers/IDisposableAnalyzers)
 - [Open.Disposable](https://github.com/Open-NET-Libraries/Open.Disposable)
+- [System.DisposableObject](https://github.com/porrey/System.DisposableObject)
 
 # License
 
