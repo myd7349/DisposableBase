@@ -22,9 +22,11 @@ namespace System
             GC.SuppressFinalize(this);
         }
 
+        protected bool IsDisposed { get; private set; }
+
         private void Dispose(bool disposing)
         {
-            if (!disposed_)
+            if (!IsDisposed)
             {
                 if (disposing)
                 {
@@ -33,7 +35,7 @@ namespace System
 
                 DisposeUnmanaged();
 
-                disposed_ = true;
+                IsDisposed = true;
             }
         }
 
@@ -47,11 +49,9 @@ namespace System
 
         protected void ThrowIfDisposed()
         {
-            if (disposed_)
+            if (IsDisposed)
                 throw new ObjectDisposedException(string.Format("{0} object is disposed.", GetType().Name));
         }
-
-        protected bool disposed_ = false;
     }
 }
 ```
