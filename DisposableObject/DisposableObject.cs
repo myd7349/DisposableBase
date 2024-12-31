@@ -29,6 +29,8 @@
             GC.SuppressFinalize(this);
         }
 
+        protected bool IsDisposed { get; private set; }
+
         // Dispose(bool disposing) executes in two distinct scenarios.
         // If disposing equals true, the method has been called directly
         // or indirectly by a user's code. Managed and unmanaged resources
@@ -39,7 +41,7 @@
         private void Dispose(bool disposing)
         {
             // Check to see if Dispose has already been called.
-            if (!disposed_)
+            if (!IsDisposed)
             {
                 // If disposing equals true, dispose all managed
                 // and unmanaged resources.
@@ -56,7 +58,7 @@
                 DisposeUnmanaged();
 
                 // Note disposing has been done.
-                disposed_ = true;
+                IsDisposed = true;
             }
         }
 
@@ -70,11 +72,9 @@
 
         protected void ThrowIfDisposed()
         {
-            if (disposed_)
+            if (IsDisposed)
                 throw new ObjectDisposedException(string.Format("{0} object is disposed.", GetType().Name));
         }
-
-        protected bool disposed_ = false;
     }
 }
 
@@ -89,3 +89,5 @@
 // Ongoing-Study/c#/notes/IDisposable.md
 // https://github.com/InCerryGit/Dispose.Scope
 // https://github.com/DotNetAnalyzers/IDisposableAnalyzers
+// Microsoft.VisualStudio.Setup.Download.dll
+// https://github.com/porrey/System.DisposableObject
