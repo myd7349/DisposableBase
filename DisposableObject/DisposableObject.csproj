@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net35;netcoreapp3.1;net6.0</TargetFrameworks>
+    <TargetFrameworks>net35;netstandard2.0;netcoreapp3.1;net6.0;net7.0;net8.0</TargetFrameworks>
     <!--
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -13,11 +13,11 @@
     <Authors>myd7349</Authors>
     <Description>A simple base class for disposable objects.</Description>
     <Copyright>© myd7349. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://github.com/myd7349/DisposableBase</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/myd7349/DisposableObject</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/myd7349/DisposableBase.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/myd7349/DisposableObject.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>IDisposable;Disposable;DisposableBase;DisposableObject</PackageTags>
+    <PackageTags>IDisposable;Disposable;DisposableObject</PackageTags>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
